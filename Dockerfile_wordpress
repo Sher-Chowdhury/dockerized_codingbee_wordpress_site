@@ -1,10 +1,14 @@
 FROM wordpress:latest
 
 # you can build this image by running:
-# docker build . -f Dockerfile_wordpress --tag codingbee_wordpress
+# docker build . -f Dockerfile_wordpress --tag img_cb_wordpress
+# this will end up creating an image called 'img_cb_wordpress'
+# you can create a container from this image by running:
+# docker container create --name cntr_cb_wordpress img_cb_wordpress
+# docker container start cntr_cb_wordpress
 
 LABEL maintainer "Sher Chowdhury"
 
-COPY image_build_scripts /
-
-RUN /image_build_scripts/install-wp-cli.sh
+RUN mkdir /image_build_scripts
+COPY image_build_scripts /image_build_scripts
+RUN  /image_build_scripts/install-wp-cli.sh
