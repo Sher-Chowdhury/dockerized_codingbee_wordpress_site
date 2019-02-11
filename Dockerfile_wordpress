@@ -1,0 +1,10 @@
+FROM wordpress:latest
+
+# you can build this image by running:
+# docker build . -f Dockerfile_wordpress --tag codingbee_wordpress
+
+LABEL maintainer "Sher Chowdhury"
+
+COPY image_build_scripts /
+
+RUN /image_build_scripts/install-wp-cli.sh

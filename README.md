@@ -42,8 +42,8 @@ To view the logs of docker container, run:
 docker logs {container_name}
 ```
 
-To create a bash session inside a running docker container, do:
+To create a bash session inside the wordpress container, do:
 
 ```bash
-docker container exec --it {container_name} bash
+docker container exec -it wordpress bash
 ```
