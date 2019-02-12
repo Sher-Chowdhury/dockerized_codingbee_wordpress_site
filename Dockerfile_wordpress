@@ -1,4 +1,4 @@
-FROM wordpress:latest
+FROM wordpress:cli
 
 # you can build this image by running:
 # docker build . -f Dockerfile_wordpress --tag img_cb_wordpress
@@ -9,6 +9,12 @@ FROM wordpress:latest
 
 LABEL maintainer "Sher Chowdhury"
 
+USER root
+RUN echo "alias ll='ls -l'" >> /etc/bashrc
+RUN id 
+RUN pwd
 RUN mkdir /image_build_scripts
 COPY image_build_scripts /image_build_scripts
-RUN  /image_build_scripts/install-wp-cli.sh
+RUN chown -R www-data:www-data /image_build_scripts
+USER www-data 
+CMD ["/image_build_scripts/bootstrap.sh"]

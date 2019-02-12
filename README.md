@@ -21,6 +21,8 @@ To do a full rebuild of the above setup, run:
 docker-compose down --timeout 1 --volumes --rmi all
 docker-compose up --detach
 ```
+for -rmi, you can replace 'all' with 'local', this will speed things up as it won't delete the mysql image continuousely. 
+
 
 This deletes all containers, images, and volumes that are linked to the docker-compose file.
 
