@@ -49,3 +49,14 @@ To create a bash session inside the wordpress container, do:
 ```bash
 docker container exec -it wordpress bash
 ```
+
+
+To test if wordpress site is working, do:
+
+```bash
+curl -Lv http://localhost:8000
+```
+
+
+## Reference
+[https://stackoverflow.com/questions/50999848/how-to-run-wp-cli-in-docker-compose-yml](https://stackoverflow.com/questions/50999848/how-to-run-wp-cli-in-docker-compose-yml) - needed to use xfs user to get it working. 

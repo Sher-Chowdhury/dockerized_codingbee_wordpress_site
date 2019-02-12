@@ -6,14 +6,16 @@ echo '########################### bootstrap ############################'
 echo '##################################################################'
 
 
-id
-cat /etc/passwd
-
 # this is to give wp contr time to properly start up
 sleep 20
+cd /image_build_scripts
+./01_initial-wp-install-wizard.sh
+./02_create_wp_users.sh
+./03_install_wp_plugins.sh
+./04_install_premium_wp_plugins.sh
 
-# core download isn't needed, since wp official image already has wp files stored in /var/www/html
-# wp core download
+# this creates dummy content
+# https://www.codeinwp.com/blog/wp-cli/
+curl http://loripsum.net/api/4 | wp post generate --post_content --count=10
 
-wp core install --path="/var/www/html" --url="http://localhost:8000" --title="CodingBee" --admin_user=admin --admin_password=password --admin_email=foo@bar.com --skip-email
 sleep 3000

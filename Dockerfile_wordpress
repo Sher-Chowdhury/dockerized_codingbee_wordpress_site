@@ -10,7 +10,9 @@ FROM wordpress:cli
 LABEL maintainer "Sher Chowdhury"
 
 USER root
-RUN echo "alias ll='ls -l'" >> /etc/bashrc
+RUN mkdir -p /etc/X11/fs
+RUN chown xfs:xfs /etc/X11/fs
+#RUN echo "alias ll='ls -l'" >> /etc/bash
 RUN id 
 RUN pwd
 RUN mkdir /image_build_scripts
