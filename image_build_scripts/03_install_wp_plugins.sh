@@ -6,8 +6,8 @@ echo '#################### install free wp plugins #####################'
 echo '##################################################################'
 
 # Delete the default plugins that came pre-installed.
-wp plugin delete hello --path=/var/www/html/  # removing default plugin
-wp plugin delete akismet --path=/var/www/html/     # removing default plugin
+wp plugin delete hello  # removing default plugin
+wp plugin delete akismet     # removing default plugin
 
 
 declare -a plugins=(
@@ -30,28 +30,12 @@ declare -a plugins=(
 )
 
 for plugin in "${plugins[@]}" ; do
-  echo ${plugin}
-  wp plugin install ${plugin} --activate --path=/var/www/html/
+  wp plugin install ${plugin} --activate
 done
 
 
-#wp plugin install advanced-sidebar-menu --activate --path=/var/www/html/
-#wp plugin install classic-editor --activate --path=/var/www/html/
-#wp plugin install disable-comments --activate --path=/var/www/html/
-#wp plugin install duplicate-post --activate --path=/var/www/html/
-#wp plugin install widget-options --activate --path=/var/www/html/
-#wp plugin install google-analytics-for-wordpress --activate --path=/var/www/html/ # need to do this manually
-#wp plugin install olevmedia-shortcodes --activate --path=/var/www/html/
-#wp plugin install elementor --activate --path=/var/www/html/
-#wp plugin install publish-view --activate --path=/var/www/html/
-#wp plugin install recently-edited-content-widget --activate --path=/var/www/html/
-#wp plugin install search-filter --activate --path=/var/www/html/
-#wp plugin install wp-github-sync --activate --path=/var/www/html/
-#wp plugin install wpforms-lite --activate --path=/var/www/html/
-
-
 # install but don't activate yet
-wp plugin install bestazon --path=/var/www/html/
+wp plugin install bestazon
 
 # https://envato.com/market-plugin/
 

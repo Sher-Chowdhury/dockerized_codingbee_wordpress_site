@@ -34,5 +34,6 @@ echo "INFO: About to install premium themes"
 cd /etc/X11/fs/premium-themes
 for theme in $(ls -rt) ; do
   echo ${theme}
-  wp theme install ./customizr-pro.zip --activate
+  wp theme install ./${theme} --activate
 done
+

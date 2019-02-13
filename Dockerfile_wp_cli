@@ -24,6 +24,6 @@ USER xfs
 # https://make.wordpress.org/cli/handbook/config/
 RUN mkdir ~/.wp-cli
 COPY image_build_scripts/wp-cli-config.yml /etc/X11/fs/.wp-cli/config.yml 
-RUN #wp package install pojome/elementor
+# RUN wp package install pojome/elementor
 
 CMD ["/image_build_scripts/bootstrap.sh"]

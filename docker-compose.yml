@@ -29,7 +29,8 @@ services:
     volumes:
       - wp_data:/var/www/html
 #      - image_build_scripts/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
-
+    extra_hosts:
+       - "codingbee.net:127.0.0.1"
   wordpress-cli:
     container_name: cntr_wp_cli
     depends_on:
@@ -39,6 +40,8 @@ services:
     user: xfs
     volumes:
       - wp_data:/var/www/html
+    extra_hosts:
+       - "codingbee.net:127.0.0.1"
 volumes:
   db_data: {}
   wp_data: {}

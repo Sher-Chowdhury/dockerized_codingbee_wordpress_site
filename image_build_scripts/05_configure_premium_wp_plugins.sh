@@ -17,9 +17,15 @@ source /image_build_scripts/env.sh
 
 # https://docs.elementor.com/article/461-wp-cli
 wp package install pojome/elementor  # running this again to install the pro part of package
-wp elementor-pro license activate ${elementor_licence_key} --path=/var/www/html/
+wp elementor-pro license activate ${elementor_licence_key}
 
 
-
-
-
+# ignoring the rest of this script now. will return to it later. 
+exit 
+echo "INFO: About to install Elementor based plugins"
+cd /etc/X11/fs/elementor-templates
+for elementor_template in $(ls -rt) ; do
+  #sleep 3000
+  echo ${elementor_template}
+  wp elementor import-library ./${elementor_template}
+done
