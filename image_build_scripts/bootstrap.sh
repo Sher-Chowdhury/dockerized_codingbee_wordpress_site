@@ -12,10 +12,12 @@ cd /image_build_scripts
 ./01_initial-wp-install-wizard.sh
 ./02_create_wp_users.sh
 ./03_install_wp_plugins.sh
-./04_install_premium_wp_plugins.sh
+./04_install_premium_wp_plugins_and_themes.sh
+./05_configure_premium_wp_plugins.sh
+./06_create_categories.sh
 
 # this creates dummy content
 # https://www.codeinwp.com/blog/wp-cli/
-curl http://loripsum.net/api/4 | wp post generate --post_content --count=10
+curl http://loripsum.net/api/4 | wp post generate --post_content --count=10 --path=/var/www/html/
 
 sleep 3000

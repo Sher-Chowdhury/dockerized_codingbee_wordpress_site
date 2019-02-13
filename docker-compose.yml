@@ -17,7 +17,7 @@ services:
     container_name: cntr_wp
     depends_on:
       - db
-    image: wordpress:latest
+    image: img_wp:latest
     ports:
       - "8000:80"
     restart: always
@@ -28,13 +28,14 @@ services:
        WORDPRESS_DB_NAME: wordpress
     volumes:
       - wp_data:/var/www/html
+#      - image_build_scripts/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
 
   wordpress-cli:
     container_name: cntr_wp_cli
     depends_on:
       - db
       - wordpress 
-    image: img_wpcli
+    image: img_wp_cli
     user: xfs
     volumes:
       - wp_data:/var/www/html

@@ -57,6 +57,22 @@ To test if wordpress site is working, do:
 curl -Lv http://localhost:8000
 ```
 
+# php settings
+you can view php settings here:
+
+[http://localhost:8000/phpinfo.php](http://localhost:8000/phpinfo.php)
+
+To monitor progress, do:
+
+```bash
+docker container logs -f cntr_wp_cli
+```
+To log into a container to troubleshoot, do:
+
+```bash
+docker container exec -it cntr_wp_cli /bin/bash
+```
 
 ## Reference
 [https://stackoverflow.com/questions/50999848/how-to-run-wp-cli-in-docker-compose-yml](https://stackoverflow.com/questions/50999848/how-to-run-wp-cli-in-docker-compose-yml) - needed to use xfs user to get it working. 
+

@@ -14,7 +14,7 @@ declare -a plugins=(
   advanced-sidebar-menu
   classic-editor
   disable-comments
-  widget-options
+#  widget-options    # using the premium version of this plugin instead
   olevmedia-shortcodes
   elementor
   recently-edited-content-widget
@@ -23,6 +23,7 @@ declare -a plugins=(
   wpforms-lite
   easy-table-of-contents
   google-sitemap-generator
+  wp-markdown    # needed by the github sync plugin
   # duplicate-post - dont need this if using github/jekyll
   # publish-view  - dont need this if using github/jekyll
   # google-analytics-for-wordpress # install this monstainsights plugin manually

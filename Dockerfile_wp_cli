@@ -18,5 +18,12 @@ RUN pwd
 RUN mkdir /image_build_scripts
 COPY image_build_scripts /image_build_scripts
 RUN chown -R www-data:www-data /image_build_scripts
-USER www-data 
+# https://make.wordpress.org/cli/handbook/common-issues/#php-fatal-error-allowed-memory-size-of-999999-bytes-exhausted-tried-to-allocate-99-bytes
+COPY image_build_scripts/uploads_wp_cli.ini /usr/local/etc/php/conf.d/uploads.ini
+USER xfs
+# https://make.wordpress.org/cli/handbook/config/
+RUN mkdir ~/.wp-cli
+COPY image_build_scripts/wp-cli-config.yml /etc/X11/fs/.wp-cli/config.yml 
+RUN #wp package install pojome/elementor
+
 CMD ["/image_build_scripts/bootstrap.sh"]

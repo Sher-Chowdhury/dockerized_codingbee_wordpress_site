@@ -1,0 +1,21 @@
+FROM wordpress:latest
+
+# you can build this image by running:
+# docker build . -f Dockerfile_wordpress --tag img_cb_wordpress
+# this will end up creating an image called 'img_cb_wordpress'
+# you can create a container from this image by running:
+# docker container create --name cntr_cb_wordpress img_cb_wordpress
+# docker container start cntr_cb_wordpress
+
+LABEL maintainer "Sher Chowdhury"
+
+USER root
+
+# commented out vim instlal in order to speed up buld process
+#RUN apt-get update
+#RUN apt-get install vim
+
+COPY image_build_scripts/uploads_wp.ini /usr/local/etc/php/conf.d/uploads.ini
+COPY image_build_scripts/phpinfo.php /var/www/html/phpinfo.php  
+RUN chown www-data:www-data /var/www/html/phpinfo.php  
+
