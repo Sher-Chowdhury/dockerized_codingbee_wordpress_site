@@ -15,9 +15,16 @@ declare -a menu_list=(
   RHCSA
   RHCE
   Puppet
+  Ansible
+  Python
+  Golang
+  Ruby
+  Docker
+  Kubernetes
+  Powershell
 )
 
-for menu_name in "${menu_name[@]}" ; do
+for menu_name in "${menu_list[@]}" ; do
   wp menu create ${menu_name}
 done
 

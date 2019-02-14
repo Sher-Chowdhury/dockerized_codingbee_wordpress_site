@@ -16,7 +16,7 @@ cd /image_build_scripts
 ./05_configure_premium_wp_plugins.sh
 ./06_create_categories.sh
 
-
+./08_import_posts_from_xml.sh
 ./09_Add-widgets-to-sidebars.sh
 ./10_create_pages.sh
 ./11_create-menus.sh
