@@ -73,6 +73,19 @@ To log into a container to troubleshoot, do:
 docker container exec -it cntr_wp_cli /bin/bash
 ```
 
+Also can run the following for troubleshooting:
+
+```bash
+curl -Lv http://localhost:8000
+```
+
+### Manual TODO list
+- install and setup monstainsights
+- configure github sync plugin
+- import elementor templates
+- 
+
+
 ## Reference
 [https://stackoverflow.com/questions/50999848/how-to-run-wp-cli-in-docker-compose-yml](https://stackoverflow.com/questions/50999848/how-to-run-wp-cli-in-docker-compose-yml) - needed to use xfs user to get it working. 
 
