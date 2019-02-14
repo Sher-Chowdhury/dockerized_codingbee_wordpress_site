@@ -24,6 +24,7 @@ declare -a plugins=(
   easy-table-of-contents
   coming-soon
   google-sitemap-generator
+  sem-external-links
 #  wp-markdown    # needed by the github sync plugin
   # duplicate-post - dont need this if using github/jekyll
   # publish-view  - dont need this if using github/jekyll
