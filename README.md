@@ -85,6 +85,15 @@ curl -Lv http://localhost:8000
 - import elementor templates
 - 
 
+# need to:
+go here:
+https://codingbee.net/wp-admin/options-general.php?page=widgetopts_plugin_settings
+and set licence key. also enable/disable various parts. Need to enable:
+- enable clone widget option
+- disable day range
+- enable Import & Export Widgets
+
+
 
 ## Reference
 [https://stackoverflow.com/questions/50999848/how-to-run-wp-cli-in-docker-compose-yml](https://stackoverflow.com/questions/50999848/how-to-run-wp-cli-in-docker-compose-yml) - needed to use xfs user to get it working. 

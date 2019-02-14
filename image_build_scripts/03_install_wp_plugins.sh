@@ -19,12 +19,12 @@ declare -a plugins=(
   elementor
   recently-edited-content-widget
   search-filter
-  wp-github-sync
+#  wp-github-sync
   wpforms-lite
   easy-table-of-contents
   coming-soon
   google-sitemap-generator
-  wp-markdown    # needed by the github sync plugin
+#  wp-markdown    # needed by the github sync plugin
   # duplicate-post - dont need this if using github/jekyll
   # publish-view  - dont need this if using github/jekyll
   # google-analytics-for-wordpress # install this monstainsights plugin manually

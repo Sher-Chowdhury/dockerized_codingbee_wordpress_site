@@ -16,8 +16,13 @@ cd /image_build_scripts
 ./05_configure_premium_wp_plugins.sh
 ./06_create_categories.sh
 
+
+./09_Add-widgets-to-sidebars.sh
+./10_create_pages.sh
+./11_create-menus.sh
+
 # this creates dummy content
 # https://www.codeinwp.com/blog/wp-cli/
 curl http://loripsum.net/api/4 | wp post generate --post_content --count=10 --path=/var/www/html/
 
-sleep 3000
+sleep 30000

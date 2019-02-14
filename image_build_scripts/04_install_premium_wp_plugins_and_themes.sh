@@ -24,7 +24,7 @@ cd /etc/X11/fs/premium-plugins
 #rm download.zip
 
 echo "INFO: About to install premium plugins"
-for plugin in $(ls -rt) ; do
+for plugin in $(ls -rt *.zip) ; do
   echo ${plugin}
   wp plugin install ./${plugin} --activate 
 done
@@ -32,7 +32,7 @@ done
 
 echo "INFO: About to install premium themes"
 cd /etc/X11/fs/premium-themes
-for theme in $(ls -rt) ; do
+for theme in $(ls -rt *.zip) ; do
   echo ${theme}
   wp theme install ./${theme} --activate
 done
