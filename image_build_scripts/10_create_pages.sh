@@ -16,9 +16,9 @@ wp post delete 3 --force
 
 
 
-wp post create /image_build_scripts/page-content/About.txt --post_type=page --post_title=Content
-wp post create /image_build_scripts/page-content/Tutorials.txt --post_type=page --post_title=Content
-wp post create /image_build_scripts/page-content/Contact.txt --post_type=page --post_title=Content
+wp post create /image_build_scripts/page-content/About.txt --post_type=page --post_title=About
+wp post create /image_build_scripts/page-content/Tutorials.txt --post_type=page --post_title=Tutorials
+wp post create /image_build_scripts/page-content/Contact.txt --post_type=page --post_title=Contact
 
 
 
