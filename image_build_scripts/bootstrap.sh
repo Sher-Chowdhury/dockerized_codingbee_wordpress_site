@@ -23,6 +23,6 @@ cd /image_build_scripts
 
 # this creates dummy content
 # https://www.codeinwp.com/blog/wp-cli/
-curl http://loripsum.net/api/4 | wp post generate --post_content --count=10 --path=/var/www/html/
+#curl http://loripsum.net/api/4 | wp post generate --post_content --count=10 
 
 sleep 30000

@@ -13,8 +13,9 @@ echo '##################################################################'
 
 wp core install --url="http://codingbee.net:8000" --title="CodingBee" --admin_user=admin --admin_password=password --admin_email=foo@bar.com --skip-email
 
+chmod 0755 /var/www/html
 
-
+wp option update blogdescription "Building Immutable Cloud Infrastructure one container at a time!"
 
 # This is needed for backupbuddy to work
 # https://ithemeshelp.zendesk.com/hc/en-us/articles/211132357-Frequently-Seen-Support-Issues#httpLoop
@@ -25,7 +26,7 @@ wp config set WP_DEBUG true --raw
 wp config set WP_DEBUG_LOG true --raw
 wp config set WP_DEBUG_DISPLAY true --raw
 wp config set WP_MEMORY_LIMIT 256M
-wp config set ALTERNATE_WP_CRON true --raw
+#wp config set ALTERNATE_WP_CRON true --raw  # disabling this for now. 
 
 
 
