@@ -80,14 +80,15 @@ curl -Lv http://localhost:8000
 ```
 
 ### Manual TODO list
-- Import/create the elementor template
+- use wpallimport to import xml payload. Use import template to do this.
+- Import/create the elementor template, if that doesn't work then create it. 
+- work on the easy TOC widget. 
 - install and setup monstainsights
 - import elementor templates
 - updated admin password
 - update guest admin password
 - menus created but need to populate them. 
 - create one nav-menu widget and then clone it. use the matt lipe widget to create it. 
-- 
 
 
 
