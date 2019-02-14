@@ -80,10 +80,17 @@ curl -Lv http://localhost:8000
 ```
 
 ### Manual TODO list
+- Import/create the elementor template
 - install and setup monstainsights
-- configure github sync plugin
 - import elementor templates
+- updated admin password
+- update guest admin password
+- menus created but need to populate them. 
+- create one nav-menu widget and then clone it. use the matt lipe widget to create it. 
 - 
+
+
+
 
 # need to:
 go here:
@@ -98,3 +105,4 @@ and set licence key. also enable/disable various parts. Need to enable:
 ## Reference
 [https://stackoverflow.com/questions/50999848/how-to-run-wp-cli-in-docker-compose-yml](https://stackoverflow.com/questions/50999848/how-to-run-wp-cli-in-docker-compose-yml) - needed to use xfs user to get it working. 
 
+wp2static.com

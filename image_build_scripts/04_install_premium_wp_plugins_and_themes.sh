@@ -6,10 +6,7 @@ echo '################# Install premium wp plugins #####################'
 echo '##################################################################'
 
 
-if [ ! -f /image_build_scripts/env.sh ]; then
-   echo "No env.sh file found so exiting early"
-   exit
-fi
+
 
 source /image_build_scripts/env.sh
 
