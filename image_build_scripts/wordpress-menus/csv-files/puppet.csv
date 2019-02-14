@@ -1,0 +1,63 @@
+Puppet - What is Puppet ::: null ::: Puppet - Intro 
+Puppet - The Puppet Narrative (learning technique) ::: null ::: null
+Puppet - Install/set-up the Puppet Master and it's Agents ::: null ::: null
+Puppet - Regenerating certificates ::: null ::: null
+Puppet - Certificates troubleshooting ::: null ::: null
+Puppet - subcommands ::: null ::: null
+Puppet - Resources ::: null ::: null
+Puppet - Manifests ::: null ::: null
+Puppet - Issue catalog to puppet agents (using node definitions) ::: null ::: null
+Puppet - Classes ::: null ::: null
+Puppet - Class Parameters ::: null ::: null
+Puppet - Adding a class to a node (aka declaring a class) ::: null ::: null
+Puppet - Create a custom resource type (aka Defined Types) ::: null ::: null
+Puppet - Class Inheritance ::: null ::: null
+Puppet - Ordering your resources ::: null ::: null
+Puppet - Ordering your classes ::: null ::: null
+Puppet - Ordering using \"Run Stages\"                                ::: null ::: null
+Puppet - Variables, If-statements, and Environment variables         ::: null ::: null
+Puppet - Functions                                                   :::   null ::: null
+Puppet - Custom Functions                                            :::   null ::: null
+Puppet - Organising your puppet code into separate files             :::   null :::null
+Puppet - Using the \"import\" keyword                                  :::   Puppet - Organising your puppet code into separate files  :::    null
+Puppet - The \"puppet apply\" approach                                 :::   Puppet - Organising your puppet code into separate files  :::    null
+Puppet - Modules, a quick taster                                     :::   Puppet - Organising your puppet code into separate files  :::    null
+Puppet - Adding other manifests/classes to a module                  :::   null                                                      :::    null
+Puppet - Modules (the \"files\" folder)                                :::   null                                                      :::    null
+Puppet - Modules (the \"templates\" folder)                            :::   null                                                      :::    null
+Puppet - The Augeas command line utility                             :::   null                                                    :::    null
+Puppet - The Augeas resource type                                    :::   null                                                    :::    null
+Puppet - Uncommenting a line in a config file                        :::   null                                                    :::    null
+Puppet - The file_in resource type                                   :::   null                                                    :::    null
+Puppet - Using Augeasproviders                                       :::   null                                                    :::    null
+Puppet - Using third-party modules from Puppetforge                  :::   null                                                      :::    null
+Puppet - r10k.yaml   :::    null  ::: null
+Puppet - r10k and the Puppetfile   ::: null  ::: null
+Puppet - Regular expressions ::: null :::  null
+Puppet - Using double colon (::) notation  ::: null ::: null
+Puppet - webrick vs passeger web server ::: null ::: null
+Puppet - What is Facter                                              :::   null                              :::   null
+Puppet - Facts                                                       :::   null                              :::   null
+Puppet - Writing Custom Facts                                        :::   null                              :::   null
+Puppet - Special Variables                                           :::   null                              :::   null
+Puppet - External Facts                                              :::   null                              :::   null
+Puppet - Directory Environments                                      ::: null  ::: null
+Puppet - The Puppet main config file (puppet.conf) ::: null ::: null
+Puppet - What is Hiera                                               :::   null                                                     :::   null
+Puppet - Install Hiera                                               :::   null                                                     :::   null
+Puppet - The hiera.yaml config file                                  :::   null                                                     :::   null
+Puppet - Using Hiera on it's own                                     :::   null                                                     :::   null
+Puppet - Retrieving different data types using Hiera                 :::   null                                                     :::   null
+Puppet - Hiera lookup Behaviours                                     :::   null                                                     :::   null
+Puppet - How Puppet Modules makes use of Hiera                       :::   null                                                     :::   null
+Puppet - Generate files from templates using Hiera data              :::   null                                                     :::   null
+Puppet - Working with a dynamic hiera.yaml file                      :::   null                                                     :::   null
+Puppet - Hiera troubleshooting                                       :::   null                                                     :::   null
+Puppet - Hiera lookup functions                                      :::   null                                                     :::   null
+Puppet - Assigning a class to a node using Hiera                     :::   null                                                     :::   null
+Puppet - External Node Classifiers (ENC)                             :::   null                                              :::   null
+Puppet - Format of the ENC's output                                  :::   null                                              :::   null
+Puppet - What is Foreman                                             :::   null                                              :::   null
+Puppet - Roles and Profiles ::: null ::: null
+Puppet - Setting user password ::: null ::: null
+Puppet - PuppetDB ::: null ::: null
