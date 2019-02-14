@@ -22,6 +22,7 @@ declare -a plugins=(
   wp-github-sync
   wpforms-lite
   easy-table-of-contents
+  coming-soon
   google-sitemap-generator
   wp-markdown    # needed by the github sync plugin
   # duplicate-post - dont need this if using github/jekyll
