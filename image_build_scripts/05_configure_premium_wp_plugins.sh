@@ -16,7 +16,7 @@ source /image_build_scripts/env.sh
 # the wp cli 'elementor' package is installed during the build process so to speed up the container creating+starting
 
 # https://docs.elementor.com/article/461-wp-cli
-wp package install pojome/elementor  # running this again to install the pro part of package
+php -d memory_limit=1024M /usr/local/bin/wp package install pojome/elementor  # running this again to install the pro part of package
 wp elementor-pro license activate ${elementor_licence_key}
 
 

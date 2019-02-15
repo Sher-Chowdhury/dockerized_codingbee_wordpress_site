@@ -10,6 +10,8 @@ FROM wordpress:cli
 LABEL maintainer "Sher Chowdhury"
 
 USER root
+RUN apk add git
+RUN chmod ugo+w /etc/hosts 
 RUN mkdir -p /etc/X11/fs
 RUN chown xfs:xfs /etc/X11/fs
 #RUN echo "alias ll='ls -l'" >> /etc/bash
@@ -24,6 +26,8 @@ USER xfs
 # https://make.wordpress.org/cli/handbook/config/
 RUN mkdir ~/.wp-cli
 COPY image_build_scripts/wp-cli-config.yml /etc/X11/fs/.wp-cli/config.yml 
-# RUN wp package install pojome/elementor
+RUN wp package install pojome/elementor
+RUN php -d memory_limit=1024M /usr/local/bin/wp package install wp-cli/restful
+
 
 CMD ["/image_build_scripts/bootstrap.sh"]

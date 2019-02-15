@@ -7,7 +7,6 @@ echo '##################################################################'
 
 
 
-
 # core download isn't needed, since wp official image already has wp files stored in /var/www/html
 # wp core download
 
@@ -26,7 +25,7 @@ wp config set WP_DEBUG true --raw
 wp config set WP_DEBUG_LOG true --raw
 wp config set WP_DEBUG_DISPLAY true --raw
 wp config set WP_MEMORY_LIMIT 256M
-#wp config set ALTERNATE_WP_CRON true --raw  # disabling this for now. 
+wp config set ALTERNATE_WP_CRON true --raw  # disabling this for now. 
 
 
 
