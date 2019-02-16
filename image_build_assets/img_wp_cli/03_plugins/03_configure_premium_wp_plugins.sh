@@ -5,19 +5,20 @@ echo '##################################################################'
 echo '################# configure premium wp plugins ###################'
 echo '##################################################################'
 
-if [ ! -f /image_build_scripts/env.sh ]; then
-   echo "No env.sh file found so exiting early"
-   exit
-fi
-
-source /image_build_scripts/env.sh
-
 
 # the wp cli 'elementor' package is installed during the build process so to speed up the container creating+starting
-
+# but running this again to install the pro part of package
 # https://docs.elementor.com/article/461-wp-cli
-php -d memory_limit=1024M /usr/local/bin/wp package install pojome/elementor  # running this again to install the pro part of package
+php -d memory_limit=1024M /usr/local/bin/wp package install pojome/elementor  
 wp elementor-pro license activate ${elementor_licence_key}
+
+
+
+# WPAllImport plugin 
+echo 'INFO: copying across xml file so it can be selectable from a dropdown menu'
+cd /etc/X11/fs/dropbox/wp-plugin-assets/wpallimport/exported-xml-payload
+cp *.zip /var/www/html/wp-content/uploads/wpallimport/files/
+
 
 
 # ignoring the rest of this script now. will return to it later. 

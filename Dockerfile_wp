@@ -15,7 +15,7 @@ USER root
 #RUN apt-get update
 #RUN apt-get install vim
 
-COPY image_build_scripts/uploads_wp.ini /usr/local/etc/php/conf.d/uploads.ini
-COPY image_build_scripts/phpinfo.php /var/www/html/phpinfo.php  
+COPY image_build_assets/img_wp/uploads_wp.ini /usr/local/etc/php/conf.d/uploads.ini
+COPY image_build_assets/img_wp/phpinfo.php /var/www/html/phpinfo.php  
 RUN chown www-data:www-data /var/www/html/phpinfo.php  
 

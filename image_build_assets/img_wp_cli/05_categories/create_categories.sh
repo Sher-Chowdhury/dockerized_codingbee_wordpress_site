@@ -5,14 +5,8 @@ echo '##################################################################'
 echo '################# configure create categories  ###################'
 echo '##################################################################'
 
-echo "INFO: About to create Top-Level Categories"
-if [ ! -f /image_build_scripts/top-level-categories.txt ]; then
-   echo "No top-level-categories.txt file found so exiting early"
-   exit
-fi
-
-
-for name in `cat /image_build_scripts/top-level-categories.txt` ; do
+echo "INFO: About to create top level categories"
+for name in `cat $PWD/assets/top-level-categories.txt` ; do
 
   echo "The name of top level category is ${name}"
   slug=$(echo "$name" | tr '[:upper:]' '[:lower:]')
@@ -21,7 +15,7 @@ for name in `cat /image_build_scripts/top-level-categories.txt` ; do
 done
 
 echo "INFO: About to create Sub-Categories"
-for line in `cat /image_build_scripts/sub-categories.csv` ; do
+for line in `cat $PWD/assets/sub-categories.csv` ; do
 
   echo "About to process: $line"
   name=`echo $line | cut -d',' -f1`

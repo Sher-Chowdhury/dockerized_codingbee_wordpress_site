@@ -14,20 +14,20 @@ RUN apk add git
 RUN chmod ugo+w /etc/hosts 
 RUN mkdir -p /etc/X11/fs
 RUN chown xfs:xfs /etc/X11/fs
-#RUN echo "alias ll='ls -l'" >> /etc/bash
 RUN id 
 RUN pwd
-RUN mkdir /image_build_scripts
-COPY image_build_scripts /image_build_scripts
-RUN chown -R www-data:www-data /image_build_scripts
+RUN mkdir /image_build_assets
+RUN chown -R www-data:www-data /image_build_assets
 # https://make.wordpress.org/cli/handbook/common-issues/#php-fatal-error-allowed-memory-size-of-999999-bytes-exhausted-tried-to-allocate-99-bytes
-COPY image_build_scripts/uploads_wp_cli.ini /usr/local/etc/php/conf.d/uploads.ini
+COPY image_build_assets/img_wp_cli/01_general/files/uploads_wp_cli.ini /usr/local/etc/php/conf.d/uploads.ini
 USER xfs
+RUN echo "alias ll='ls -l'" >> ~/.bashrc
 # https://make.wordpress.org/cli/handbook/config/
 RUN mkdir ~/.wp-cli
-COPY image_build_scripts/wp-cli-config.yml /etc/X11/fs/.wp-cli/config.yml 
+COPY image_build_assets/img_wp_cli/01_general/files/wp-cli-config.yml /etc/X11/fs/.wp-cli/config.yml
 RUN wp package install pojome/elementor
 RUN php -d memory_limit=1024M /usr/local/bin/wp package install wp-cli/restful
+COPY image_build_assets/img_wp_cli /image_build_assets
 
 
-CMD ["/image_build_scripts/bootstrap.sh"]
+CMD ["/image_build_assets/bootstrap.sh"]

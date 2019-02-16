@@ -1,1 +1,2 @@
-image_build_scripts/env.sh
+.env
+cntr_wp_cli.env

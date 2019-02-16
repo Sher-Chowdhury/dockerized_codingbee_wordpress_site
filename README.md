@@ -21,10 +21,10 @@ To do a full rebuild of the above setup, run:
 docker-compose down --timeout 1 --volumes --rmi all
 docker-compose up --detach
 ```
+This deletes all containers, images, and volumes that are linked to the docker-compose file.
+
 for -rmi, you can replace 'all' with 'local', this will speed things up as it won't delete the mysql image continuousely. 
 
-
-This deletes all containers, images, and volumes that are linked to the docker-compose file.
 
 ## Other useful Docker commands
 
@@ -38,32 +38,30 @@ docker volume rm $(docker volume ls --quiet)
 docker system prune --all --volumes --force
 ```
 
-To view the logs of docker container, run:
 
-```bash
-docker logs {container_name}
+To test if wordpress site is working, add the following to your macbook's /etc/hosts file
+
+## Sanity checking
+
+```
+127.0.0.1    codingbee.net
 ```
 
-To create a bash session inside the wordpress container, do:
+then do:
 
 ```bash
-docker container exec -it wordpress bash
+curl -Lv http://codingbee.net:8000
 ```
 
-
-To test if wordpress site is working, do:
-
-```bash
-curl -Lv http://localhost:8000
-```
-
-# php settings
+### php settings
 you can view php settings here:
 
-[http://localhost:8000/phpinfo.php](http://localhost:8000/phpinfo.php)
+[http://codingbee.net:8000/phpinfo.php](http://codingbee:8000/phpinfo.php)
 
 To monitor progress, do:
 
+
+## monitoring + troubleshooting
 ```bash
 docker container logs -f cntr_wp_cli
 ```
@@ -73,13 +71,9 @@ To log into a container to troubleshoot, do:
 docker container exec -it cntr_wp_cli /bin/bash
 ```
 
-Also can run the following for troubleshooting:
-
-```bash
-curl -Lv http://localhost:8000
-```
 
 ### Manual TODO list
+- 
 - use wpallimport to import xml payload. Use import template to do this.
 - Import/create the elementor template, if that doesn't work then create it. 
 - work on the easy TOC widget. 
@@ -100,6 +94,8 @@ and set licence key. also enable/disable various parts. Need to enable:
 - enable clone widget option
 - disable day range
 - enable Import & Export Widgets
+- remove the phpinfo.php file
+- remove the importbuddy.php file. 
 
 
 

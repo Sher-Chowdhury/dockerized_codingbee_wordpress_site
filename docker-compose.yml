@@ -9,9 +9,10 @@ services:
     restart: always
     environment:
       MYSQL_ROOT_PASSWORD: somewordpress
-      MYSQL_DATABASE: wordpress
-      MYSQL_USER: wordpress
-      MYSQL_PASSWORD: wordpress
+      # https://docs.docker.com/compose/environment-variables/#the-env-file
+      MYSQL_DATABASE: ${db_name}
+      MYSQL_USER: ${db_user}
+      MYSQL_PASSWORD: ${db_password}
 
   wordpress:
     container_name: cntr_wp
@@ -25,9 +26,9 @@ services:
     restart: always
     environment:
        WORDPRESS_DB_HOST: db:3306
-       WORDPRESS_DB_USER: wordpress
-       WORDPRESS_DB_PASSWORD: wordpress
-       WORDPRESS_DB_NAME: wordpress
+       WORDPRESS_DB_USER: ${db_user}
+       WORDPRESS_DB_PASSWORD: ${db_password}
+       WORDPRESS_DB_NAME: ${db_name}
     volumes:
       - wp_data:/var/www/html
 #      - image_build_scripts/uploads.ini:/usr/local/etc/php/conf.d/uploads.ini
@@ -41,10 +42,12 @@ services:
     image: img_wp_cli
     environment:
        WORDPRESS_DB_HOST: db:3306
-       WORDPRESS_DB_USER: wordpress
-       WORDPRESS_DB_PASSWORD: wordpress
-       WORDPRESS_DB_NAME: wordpress
+       WORDPRESS_DB_USER: ${db_user}
+       WORDPRESS_DB_PASSWORD: ${db_password}
+       WORDPRESS_DB_NAME: ${db_name}
     user: xfs
+    env_file:
+      - cntr_wp_cli.env
     volumes:
       - wp_data:/var/www/html
     extra_hosts:
