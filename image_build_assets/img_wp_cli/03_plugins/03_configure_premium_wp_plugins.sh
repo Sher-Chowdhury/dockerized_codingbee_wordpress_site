@@ -22,7 +22,7 @@ cp *.zip /var/www/html/wp-content/uploads/wpallimport/files/
 
 
 echo "INFO: About to install Elementor based plugins"
-cd /etc/X11/fs/elementor-templates
+cd /etc/X11/fs/dropbox/wp-plugin-assets/elementor-templates
 for elementor_template in $(ls -rt) ; do
   #sleep 3000
   echo ${elementor_template}
