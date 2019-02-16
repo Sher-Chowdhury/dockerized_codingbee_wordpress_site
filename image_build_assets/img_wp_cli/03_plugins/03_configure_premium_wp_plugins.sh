@@ -21,8 +21,6 @@ cp *.zip /var/www/html/wp-content/uploads/wpallimport/files/
 
 
 
-# ignoring the rest of this script now. will return to it later. 
-exit 
 echo "INFO: About to install Elementor based plugins"
 cd /etc/X11/fs/elementor-templates
 for elementor_template in $(ls -rt) ; do

@@ -12,6 +12,7 @@ wp plugin delete akismet     # removing default plugin
 
 declare -a plugins=(
   advanced-sidebar-menu
+  widget-importer-exporter   # using this because widget-options built-in importer/exporter doesn't work
   classic-editor
   disable-comments
   olevmedia-shortcodes

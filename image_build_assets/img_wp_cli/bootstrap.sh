@@ -17,6 +17,7 @@ ${script_folder}/03_plugins/03_configure_premium_wp_plugins.sh
 ${script_folder}/04_themes/install_premium_themes.sh
 ${script_folder}/05_categories/create_categories.sh
 ${script_folder}/06_pages/create_pages.sh
+${script_folder}/06a_posts/import_posts.sh
 ${script_folder}/07_menus/import-menus.sh
 ${script_folder}/08_widgets/add-widgets-to-sidebars.sh
 
