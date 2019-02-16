@@ -5,6 +5,9 @@ echo '##################################################################'
 echo '################### Create pages ###################'
 echo '##################################################################'
 
+# this script is no longer needed becuase the wps-menu-exporter plugin does this job for us. 
+exit
+
 wp post list
 
 # delete the default hello world post

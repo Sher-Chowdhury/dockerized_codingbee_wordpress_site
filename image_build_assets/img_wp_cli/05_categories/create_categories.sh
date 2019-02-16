@@ -5,6 +5,10 @@ echo '##################################################################'
 echo '################# configure create categories  ###################'
 echo '##################################################################'
 
+# this script is no longer needed becuase the wps-menu-exporter plugin does this job for us. 
+exit
+
+
 echo "INFO: About to create top level categories"
 for name in `cat $PWD/assets/top-level-categories.txt` ; do
 
