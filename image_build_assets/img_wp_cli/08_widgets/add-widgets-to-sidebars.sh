@@ -13,6 +13,4 @@ wp widget list layers-right-sidebar
 wp widget add search layers-right-sidebar 
 wp widget add search layers-left-sidebar 
 
-
-
-
+# wp import --authors=create sher /etc/X11/fs/dropbox/wp-plugin-assets/widget-importer-exporter/*.wie

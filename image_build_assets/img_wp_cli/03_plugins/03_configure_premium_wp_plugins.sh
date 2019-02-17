@@ -20,7 +20,7 @@ cd /etc/X11/fs/dropbox/wp-plugin-assets/wpallimport/exported-xml-payload
 cp *.zip /var/www/html/wp-content/uploads/wpallimport/files/
 
 
-
+# this part appears to have a elementor related bug. So exiting early for now. 
 echo "INFO: About to install Elementor based plugins"
 cd /etc/X11/fs/dropbox/wp-plugin-assets/elementor-templates
 for elementor_template in $(ls -rt) ; do
